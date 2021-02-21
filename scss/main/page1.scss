@@ -1,0 +1,32 @@
+@import '../modules/variable.scss';
+@import '../modules/classes.scss';
+
+body {
+    background: $color-01;
+    @include display(flex); 
+    @include flex-prop(space-between,flex-start);
+    @include background(cover,no-repeat,center);
+    @include width(100px);
+    @media (max-width: 1024px) {
+        @include flex-prop (center,center);
+    }
+    .box {
+        @include width(100px);
+        @extend %title;
+        height: $size03;
+        @include position(absolute);
+        @include absolute(50px,120px);
+        &:last-child{
+            width: 500px;
+        }
+        &:hover{
+            background: rgb(90, 90, 41);
+        }
+        @media (max-width: 1024px) {
+            @include width (100px);
+        }
+        @media (max-width: 480px) {
+            @include width (250px);
+        }
+    }
+}

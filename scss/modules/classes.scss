@@ -1,0 +1,14 @@
+@import './variable.scss';
+
+
+%title {
+    color: $color-03;
+    font-size: $font-size01;
+    text-align: center;
+}
+
+%container{
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
